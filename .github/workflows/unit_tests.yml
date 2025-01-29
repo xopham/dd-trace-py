@@ -30,7 +30,7 @@ jobs:
         run: rustup update stable && rustup default stable && rustup component add rustfmt clippy
 
       - name: Install hatch
-        uses: pypa/hatch@257e27e51a6a5616ed08a39a408a21c35c9931bc # install
+        uses: pypa/hatch@install
         with:
           version: "1.12.0"
 
