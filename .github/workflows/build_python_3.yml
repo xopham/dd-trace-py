@@ -78,7 +78,7 @@ jobs:
 
       - name: Set up QEMU
         if: runner.os == 'Linux' && matrix.os != 'arm-4core-linux'
-        uses: docker/setup-qemu-action@2b82ce82d56a2a04d2637cd93a637ae1b359c0a7 # v2.2.0
+        uses: docker/setup-qemu-action@4574d27a4764455b42196d70a065bc6853246a25 # v3.4.0
         with:
           platforms: all
 
@@ -165,7 +165,7 @@ jobs:
         run: |
           chcp 65001 #set code page to utf-8
           echo "ARTIFACT_NAME=${{ matrix.only }}"  >> $env:GITHUB_ENV
-      - uses: actions/upload-artifact@65c4c4a1ddee5b72f698fdd19549f0f0fb45cf08 # v4.6.0
+      - uses: actions/upload-artifact@4cec3d8aa04e39d1a68397de0c4cd6fb9dce8ec1 # v4.6.1
         with:
           name: wheels-${{ env.ARTIFACT_NAME }}
           path: ./wheelhouse/*.whl
